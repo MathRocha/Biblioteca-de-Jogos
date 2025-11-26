@@ -19,7 +19,7 @@ fetch("/dados.json")
     avaliacoes.value.forEach((avaliacao) => {
       avaliacao.nome = data.usuarios.find(
         (usuario) => usuario.id === avaliacao.usuarioId
-      ).nome;
+      )?.nome;
     });
 
     if (!jogo.value) {

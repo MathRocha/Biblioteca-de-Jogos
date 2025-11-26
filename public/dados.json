@@ -9,38 +9,38 @@
     {
       "id": 2,
       "nome": "Balatro",
-      "descricao": "TODO",
-      "foto": null
+      "descricao": "O pôquer roguelike. Balatro é um jogo de criação de baralho hipnoticamente satisfatório em que você joga mãos de pôquer ilegais, descobre curingas que mudam o jogo e aciona combos escandalosos e cheios de adrenalina.",
+      "foto": "\\src\\assets\\imgs\\balatro.jpg"
     },
     {
       "id": 3,
       "nome": "Persona 5 Royal",
-      "descricao": "TODO",
-      "foto": null
+      "descricao": "Vista a máscara, junte-se aos Phantom Thieves of Hearts, arme grandes assaltos, infiltre-se nas mentes dos corruptos e faça eles mudarem de atitude!",
+      "foto": "\\src\\assets\\imgs\\persona5.jpg"
     },
     {
       "id": 4,
-      "nome": "The Witcher 3",
-      "descricao": "TODO",
-      "foto": null
+      "nome": "The Witcher 3: Wild Hunt",
+      "descricao": "Você é Geralt de Rívia, mercenário matador de monstros. Você está em um continente devastado pela guerra e infestado de monstros para você explorar à vontade. Sua tarefa é encontrar Ciri, a Criança da Profecia — uma arma viva que pode alterar a forma do mundo.",
+      "foto": "\\src\\assets\\imgs\\the_witcher_3.jpg"
     },
     {
       "id": 5,
       "nome": "Yakuza 0",
-      "descricao": "TODO",
-      "foto": null
+      "descricao": "A lendária série japonesa da SEGA finalmente chega ao PC. Lute bravamente por Tóquio e Osaka como os jovens yakuza Kiryu e Majima. Vivencie a vida no Japão dos anos 80 em uma experiência única nos videogames, com taxas de quadros ilimitadas e resolução 4K. Uma lenda nasce.",
+      "foto": "\\src\\assets\\imgs\\yakuza0.jpg"
     },
     {
       "id": 6,
       "nome": "Fallout New Vegas",
-      "descricao": "TODO",
-      "foto": null
+      "descricao": "Bem-vindo a Las Vegas. Nova Las Vegas. Aproveite sua estadia!",
+      "foto": "\\src\\assets\\imgs\\fallout_new_vegas.jpg"
     },
     {
       "id": 7,
       "nome": "Undertale",
-      "descricao": "TODO",
-      "foto": null
+      "descricao": "UNDERTALE! O RPG onde você não precisa destruir ninguém.",
+      "foto": "\\src\\assets\\imgs\\undertale.jpg"
     }
   ],
   "usuarios": [
