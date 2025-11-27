@@ -3,12 +3,17 @@ import Card from "@/components/Card.vue";
 import JogoCard from "@/components/JogoCard.vue";
 import { ref } from "vue";
 
+const { id } = defineProps(["id"]);
+let usuario = ref(null);
 let jogos = ref([]);
 
 fetch("/dados.json")
   .then((resp) => resp.json())
   .then((data) => {
-    jogos.value = data.jogos;
+    usuario.value = data.usuarios.find((usuario) => usuario.id === +id);
+    jogos.value = data.jogos.filter((jogo) =>
+      usuario.value.jogos.includes(jogo.id)
+    );
   });
 </script>
 
@@ -25,5 +30,5 @@ fetch("/dados.json")
       </Card>
     </RouterLink>
   </div>
-  <p v-else>Não há jogos cadastrados.</p>
+  <p v-else>Usuário não possui jogos.</p>
 </template>

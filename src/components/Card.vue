@@ -11,7 +11,7 @@ defineProps(['ladoEsquerdoReto']);
 <style scoped>
 .card {
   margin: 2em 0;
-  border: 2px solid #67329b;
+  border: 2px solid hsla(160, 100%, 37%, 1);;
   border-radius: 15px;
 }
 

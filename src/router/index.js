@@ -34,13 +34,13 @@ const router = createRouter({
         {
           path: "",
           name: "jogosUsuario",
-          component: () => import("../views/DetalheUsuario.vue"),
+          component: () => import("../views/JogosUsuario.vue"),
           props: true,
         },
         {
           path: "avaliacoes",
           name: "avaliacoesUsuario",
-          component: () => import("../views/DetalheUsuario.vue"),
+          component: () => import("../views/AvaliacoesUsuario.vue"),
           props: true,
         },
       ],
