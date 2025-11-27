@@ -22,7 +22,7 @@ fetch("/dados.json")
     <RouterLink
       v-for="(jogo, index) in jogos"
       :key="'jogo' + index"
-      :to="'jogo/' + jogo.id"
+      :to="{ name: 'detalheJogo', params: {id: jogo.id}}"
       class="card-link"
     >
       <Card :ladoEsquerdoReto="true">
