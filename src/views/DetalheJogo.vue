@@ -3,7 +3,7 @@ import AvaliacaoCard from "@/components/AvaliacaoCard.vue";
 import Card from "@/components/Card.vue";
 import JogoCard from "@/components/JogoCard.vue";
 import router from "@/router";
-import { ref } from "vue";
+import { computed, ref } from "vue";
 
 const { id } = defineProps(["id"]);
 let jogo = ref(null);
@@ -27,6 +27,18 @@ fetch("/dados.json")
       router.replace({ name: "listaJogos" });
     }
   });
+
+const media = computed(() => {
+  if (avaliacoes.value.length > 0) {
+    const somaAvaliacoes = avaliacoes.value.reduce(
+      (cur, acc) => cur + acc.nota,
+      0
+    );
+    return somaAvaliacoes / avaliacoes.value.length;
+  }
+
+  return null;
+});
 </script>
 
 <template>
@@ -34,7 +46,9 @@ fetch("/dados.json")
     <JogoCard v-if="jogo" :jogo="jogo" />
   </Card>
 
-  <h1>Avaliações</h1>
+  <h1>
+    Avaliações <span v-if="media" class="media">{{ media }} / 5</span>
+  </h1>
 
   <div v-if="avaliacoes.length > 0">
     <Card v-for="avaliacao in avaliacoes">
@@ -43,3 +57,9 @@ fetch("/dados.json")
   </div>
   <p v-else>Não há avaliações para esse jogo.</p>
 </template>
+
+<style scoped>
+.media {
+  margin-left: .5em;
+}
+</style>
