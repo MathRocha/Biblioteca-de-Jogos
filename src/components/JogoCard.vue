@@ -4,8 +4,8 @@ const { jogo } = defineProps(['jogo']);
 </script>
 
 <template>
-  <div class="grid">
-    <img :src="jogo.foto" :alt="jogo.nome" width="100%"></img>
+  <div class="flexbox">
+    <img :src="jogo.foto" :alt="jogo.nome"></img>
   
     <div>
       <h2>{{ jogo.nome }}</h2>
@@ -15,13 +15,34 @@ const { jogo } = defineProps(['jogo']);
 </template>
 
 <style scoped>
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
+.flexbox {
+  display: flex;
   gap: 10px;
 }
 
-.grid h2 {
-    margin-top: 0;
+.flexbox img {
+  width: 40%;
+}
+
+.flexbox div {
+  width: 60%;
+}
+
+.flexbox h2 {
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .flexbox {
+    flex-direction: column;
+  }
+  
+  .flexbox img {
+    width: unset;
+  }
+
+  .flexbox div {
+    width: unset;
+  }
 }
 </style>
